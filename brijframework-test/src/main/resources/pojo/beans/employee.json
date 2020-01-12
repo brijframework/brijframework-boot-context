@@ -1,0 +1,23 @@
+[
+	{
+		"id": "Employee_002",
+		"model": "Employee_002",
+		"name": "Employee",
+		"properties": {
+			"id": "002",
+			"name": "Ram"
+		}
+	},
+	{
+		"id": "Employee_003",
+		"model": "Employee_003",
+		"name": "Employee",
+		"properties": {
+			"id": "003",
+			"name": "Ram Kishor",
+			"address@ref": {
+				"@ref": "Address_001"
+			}
+		}
+	}
+]

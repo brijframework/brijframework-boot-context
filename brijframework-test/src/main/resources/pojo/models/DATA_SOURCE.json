@@ -1,0 +1,23 @@
+{
+	"id": "DATA_SOURCE",
+	"type": "org.apache.commons.dbcp.BasicDataSource",
+	"name": "DataSource",
+	"access": "READ_WRITE",
+	"properties": {
+		"driverClassName": {
+			"access": "READ_WRITE"
+		},
+		"url": {
+			"access": "READ_WRITE"
+		},
+		"username": {
+			"access": "READ_WRITE"
+		},
+		"password": {
+			"access": "READ_WRITE"
+		},
+		"defaultCatalog": {
+			"access": "READ_WRITE"
+		}
+	}
+}

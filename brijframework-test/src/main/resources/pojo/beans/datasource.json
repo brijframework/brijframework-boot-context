@@ -1,0 +1,26 @@
+[
+
+   {
+	 "id" :"fadsan_school_db_source",
+	 "type":"org.apache.commons.dbcp.BasicDataSource",
+	 "name": "DataSource",
+	 "properties":{
+	    "driverClassName":"com.mysql.cj.jdbc.Driver",
+	    "url":"jdbc:mysql://localhost:3306/",
+	    "username":"root",
+	    "password":"root"
+	 }
+   },
+   {
+	 "id" :"fadsan_school_source",
+	 "model":"DATA_SOURCE",
+	 "name": "DataSource",
+	 "properties":{
+	    "driverClassName":"com.mysql.cj.jdbc.Driver",
+	    "url":"jdbc:mysql://localhost:3306/",
+	    "username":"root",
+	    "password":"root",
+	    "defaultCatalog":"fadsan_school"
+	 }
+   }
+]

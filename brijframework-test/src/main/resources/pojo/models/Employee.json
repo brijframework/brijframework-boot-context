@@ -1,0 +1,33 @@
+[
+	{
+		"id": "Employee_002",
+		"type": "org.brijframework.dao.Employee",
+		"name": "Employee",
+		"access": "READ_WRITE",
+		"properties": {
+			"id": {
+				"access": "READ_WRITE"
+			},
+			"name": {
+				"access": "READ_WRITE"
+			}
+		}
+	},
+	{
+		"id": "Employee_003",
+		"type": "org.brijframework.dao.Employee",
+		"name": "Employee",
+		"access": "READ_WRITE",
+		"properties": {
+			"id": {
+				"access": "READ_WRITE"
+			},
+			"name": {
+				"access": "READ_WRITE"
+			},
+			"address": {
+				"access": "READ_WRITE"
+			}
+		}
+	}
+]

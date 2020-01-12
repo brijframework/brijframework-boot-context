@@ -1,0 +1,56 @@
+# application
+---
+datasource:
+   name: Test User
+   bootstrap: 
+       config:
+          source:
+              model:
+                 json : 
+                    location : pojo\\models
+              beans:
+                 json : 
+                    location : pojo\\beans
+          jdbc:
+              model : 
+                backup : 
+                  json : 
+                  -
+                     enable : true
+                     location : jdbc\\models
+                     catalog : fadsan_school
+                     source : fadsan_school_source
+                     role: update
+                restore : 
+                   json : 
+                    -
+                     enable : true
+                     location : jdbc\\models
+                     catalog : fadsan_school_db
+                     source : fadsan_school_db_source
+                     role: update
+                diff : 
+                  json : 
+                   -
+                     enable : true
+                     location : jdbc\\diffs
+                     catalogLeft  : fadsan_school
+                     catalogRight : fadsan_school_db
+              beans: 
+                backup : 
+                   json : 
+                    -
+                     enable : true
+                     location : jdbc\\beans
+                     catalog : fadsan_school
+                     source : fadsan_school_source
+                     role: update
+                restore : 
+                  json : 
+                    -
+                     enable : false
+                     location : jdbc\beans
+                     catalog : fadsan_school_db
+                     source : fadsan_school_db_source
+                     role: update
+                  
