@@ -4,6 +4,7 @@ public class EntityData extends ModelData{
 
 	private Integer sequence;
 	private String unique;
+	private String name;
 	
 	public Integer getSequence() {
 		return sequence;
@@ -20,4 +21,13 @@ public class EntityData extends ModelData{
 	public String getUnique() {
 		return unique;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
 }

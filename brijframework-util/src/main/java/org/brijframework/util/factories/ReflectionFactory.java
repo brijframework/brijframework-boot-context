@@ -50,9 +50,10 @@ public final class ReflectionFactory {
 			e.printStackTrace();
 		}
 		try {
-			getClassListFromExternal().forEach(cls->{
-				getCache().get(EXTERNAL_CLASS).add(cls);
-			});
+			/*
+			 * getClassListFromExternal().forEach(cls->{
+			 * getCache().get(EXTERNAL_CLASS).add(cls); });
+			 */
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

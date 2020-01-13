@@ -1,0 +1,48 @@
+[
+	{
+		"id": "EOLKCountFreqDaily",
+		"type": "org.brijframework.dao.EOLKCountFreq",
+		"name": "EOLKCountFreq",
+		"unique": "typeId",
+		"sequence": 4,
+		"properties": {
+			"typeId": "DAILY",
+			"name": "Daily",
+			"description": "Count daily time duraction"
+		}
+	},
+	{
+		"id": "EOLKCountFreqWeekly",
+		"type": "org.brijframework.dao.EOLKCountFreq",
+		"name": "EOLKCountFreq",
+		"sequence": 4,
+		"properties": {
+			"typeId": "WEEKLY",
+			"name": "Weekly",
+			"description": "Count weekly time duraction"
+		}
+	}
+	,
+	{
+		"id": "EOLKCountFreqMonthly",
+		"type": "org.brijframework.dao.EOLKCountFreq",
+		"name": "EOLKCountFreq",
+		"sequence": 4,
+		"properties": {
+			"typeId": "MONTHLY",
+			"name": "Monthly",
+			"description": "Count Monthly time duraction"
+		}
+	},
+	{
+		"id": "EOLKCountFreqPeriod",
+		"type": "org.brijframework.dao.EOLKCountFreq",
+		"name": "EOLKCountFreq",
+		"sequence": 4,
+		"properties": {
+			"typeId": "PERIOD",
+			"name": "Period",
+			"description": "Count Period time duraction"
+		}
+	}
+]

@@ -1,8 +1,11 @@
 package org.brijframework.dao;
 
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.brijframework.Access;
 import org.brijframework.bean.BeanObject;
@@ -28,6 +31,7 @@ import org.brijframework.support.model.queries.Param;
 	 }
   )
 )
+@Entity
 public class Employee implements BeanObject {
 	/**
 	 * 
@@ -36,7 +40,9 @@ public class Employee implements BeanObject {
 
 	@ModelProperty
 	@Identity(strategy = @Strategy(formula = Formula.Sequence, init = 10))
-	private String id;
+	@Id
+	@GeneratedValue
+	private Integer id;
 
 	@ModelProperty(required = true)
 	private String name;
@@ -44,28 +50,23 @@ public class Employee implements BeanObject {
 	@ModelProperty(access = Access.AUTO, required = true)
 	private long rollNo;
 
-	@ModelRelation(mappedBy = "Address_001", access = Access.AUTO, required = true)
-	private Address address;
-
 	@ModelRelation(access = Access.AUTO, required = true)
+	@OneToMany(mappedBy = "employee")
 	private List<Address> addresses;
-
-	@ModelProperty(access = Access.AUTO, required = true, type = LinkedHashMap.class)
-	private Map<Integer, Address> addresseMap;
 
 	public Employee() {
 		System.out.println("colling for default");
 	}
 
 	@ModelConstruct(params = { @ModelParam(type = String.class, index = 0) })
-	public Employee(String id) {
+	public Employee(int id) {
 		System.out.println("colling for String only ");
 		this.id = id;
 	}
 
-	@ModelConstruct(params = { @ModelParam(type = String.class, index = 0),
+	@ModelConstruct(params = { @ModelParam(type = Integer.class, index = 0),
 			@ModelParam(type = String.class, index = 1) })
-	public Employee(String id, String name) {
+	public Employee(int id, String name) {
 		System.out.println("colling for id and name ");
 		this.id = id;
 		this.name = name;
@@ -75,7 +76,7 @@ public class Employee implements BeanObject {
 			@ModelParam(type = String.class, index = 1), 
 			@ModelParam(type = Long.class, index = 2)
 	})
-	public Employee(String id, String name, long rollNo) {
+	public Employee(Integer id, String name, long rollNo) {
 		System.out.println("colling for id and name, rollno ");
 		this.id = id;
 		this.name = name;
@@ -83,14 +84,40 @@ public class Employee implements BeanObject {
 	}
 
 	@ModelProperty
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
 	@ModelProperty
-	public String getId() {
+	public Integer getId() {
 		System.out.println("id is getting :" + id);
 		return id;
+	}
+	
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public long getRollNo() {
+		return rollNo;
+	}
+
+	public void setRollNo(long rollNo) {
+		this.rollNo = rollNo;
+	}
+
+	public List<Address> getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
 	}
 
 	@Logic
@@ -120,13 +147,5 @@ public class Employee implements BeanObject {
 			@Param(value = "1", index = 1, type = String.class) String j) {
 		System.out.println("String j=" + j);
 	}
-
-	@Override
-	public String toString() {
-		return super.toString()+"[id=" + id + ", name=" + name + ", rollNo=" + rollNo + ", address=" + address + ", addresses="
-				+ addresses + ", addresseMap=" + addresseMap + "]";
-	}
-	
-	
 
 }

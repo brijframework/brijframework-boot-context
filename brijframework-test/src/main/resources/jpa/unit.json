@@ -1,0 +1,100 @@
+[
+	{
+		"id": "EOLKUnitTsp",
+		"type": "org.brijframework.dao.EOLKUnit",
+		"name": "EOLKUnit",
+		"unique": "typeId",
+		"sequence": 2,
+		"properties": {
+			"typeId": "TSP",
+			"shortDesc": "Tsp",
+			"longDesc": "Tsp",
+			"friendlyName": "Volume ( Tsp }",
+			"unitGroup@ref": "EOLKUnitGroupFluid"
+		}
+	},
+	{
+		"id": "EOLKUnitTbsp",
+		"type": "org.brijframework.dao.EOLKUnit",
+		"name": "EOLKUnit",
+		"unique": "typeId",
+		"sequence": 2,
+		"properties": {
+			"typeId": "TBSP",
+			"shortDesc": "Tbsp",
+			"longDesc": "Tbsp",
+			"friendlyName": "Volume ( Tbsp }",
+			"unitGroup@ref": "EOLKUnitGroupFluid"
+		}
+	},
+	{
+		"id": "EOLKUnitPint",
+		"type": "org.brijframework.dao.EOLKUnit",
+		"name": "EOLKUnit",
+		"unique": "typeId",
+		"sequence": 2,
+		"properties": {
+			"typeId": "PINT",
+			"shortDesc": "Pt",
+			"longDesc": "Pint",
+			"friendlyName": "Volume ( Pint }",
+			"unitGroup@ref": "EOLKUnitGroupFluid"
+		}
+	},
+	{
+		"id": "EOLKUnitQuart",
+		"type": "org.brijframework.dao.EOLKUnit",
+		"name": "EOLKUnit",
+		"unique": "typeId",
+		"sequence": 2,
+		"properties": {
+			"typeId": "QUART",
+			"shortDesc": "Qrt",
+			"longDesc": "Quart",
+			"friendlyName": "Volume ( Quart }",
+			"unitGroup@ref": "EOLKUnitGroupFluid"
+		}
+	},
+	{
+		"id": "EOLKUnitGallon",
+		"type": "org.brijframework.dao.EOLKUnit",
+		"name": "EOLKUnit",
+		"unique": "typeId",
+		"sequence": 2,
+		"properties": {
+			"typeId": "GALLON",
+			"shortDesc": "Gl",
+			"longDesc": "Gallon",
+			"friendlyName": "Volume ( Gallon }",
+			"unitGroup@ref": "EOLKUnitGroupFluid"
+		}
+	},
+	{
+		"id": "EOLKUnitKiloGram",
+		"type": "org.brijframework.dao.EOLKUnit",
+		"name": "EOLKUnit",
+		"unique": "typeId",
+		"sequence": 2,
+		"properties": {
+			"typeId": "KILOGRAM",
+			"shortDesc": "K G",
+			"longDesc": "Kilo Gram",
+			"friendlyName": " Weight ( Gallon }",
+			"unitGroup@ref": "EOLKUnitGroupSolid"
+		}
+	},
+	{
+		"id": "EOLKUnitGram",
+		"type": "org.brijframework.dao.EOLKUnit",
+		"name": "EOLKUnit",
+		"unique": "typeId",
+		"sequence": 2,
+		"properties": {
+			"typeId": "GRAM",
+			"shortDesc": "Gr",
+			"longDesc": "Gram",
+			"friendlyName": " Weight ( Gram }",
+			"unitGroup@ref": "EOLKUnitGroupSolid"
+		}
+	}
+]

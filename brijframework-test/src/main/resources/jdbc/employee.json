@@ -1,0 +1,39 @@
+[
+	{
+		"id": "Employee",
+		"type": "org.brijframework.dao.Employee",
+		"unique": "name",
+		"sequence": 4,
+		"properties": {
+			"id": 1,
+			"name": "Ram",
+			"rollNo": 1010
+		}
+	},
+	{
+		"id": "Address",
+		"type": "org.brijframework.dao.Address",
+		"unique": "line",
+		"sequence": 4,
+		"properties": {
+			"id": 1,
+			"line": "line",
+			"employee": {
+				"@ref": "Employee"
+			},
+			"city": {
+				"@ref": "City"
+			}
+		}
+	},
+	{
+		"id": "City",
+		"type": "org.brijframework.dao.City",
+		"unique": "name",
+		"sequence": 4,
+		"properties": {
+			"id": 1,
+			"name": "Noida"
+		}
+	}
+]

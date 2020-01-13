@@ -3,7 +3,6 @@ package org.brijframework.jpa.util;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +15,6 @@ import org.brijframework.util.reflect.AnnotationUtil;
 import org.brijframework.util.reflect.ClassUtil;
 import org.brijframework.util.reflect.FieldUtil;
 import org.brijframework.util.support.ReflectionAccess;
-import org.brijframework.util.validator.ValidationUtil;
 
 public class EntityMapper {
 
@@ -60,7 +58,8 @@ public class EntityMapper {
 	}
 		
 	private static EntityField getEntityField(EntityModel model, Field field, Map<String, Object> colMap) {
-		EntityField entityField=ValidationUtil.isProjectClass(field.getType()) || Collection.class.isAssignableFrom(field.getType())? new EntityRelation() :  new EntityField();
+		EntityField entityField=colMap.containsKey("relation")? new EntityRelation(): new EntityField();
+				//ValidationUtil.isProjectClass(field.getType()) || Collection.class.isAssignableFrom(field.getType())? new EntityRelation() :  new EntityField();
 		entityField.setId(model.getId()+"_"+field.getName());
 		entityField.setName(field.getName());
 		entityField.setModel(model);
@@ -117,6 +116,7 @@ public class EntityMapper {
 				}else {
 					colAnnotationMap.put("column", field.getName());
 				}
+				colAnnotationMap.remove("relation");
 				colMap.putAll(colAnnotationMap);;
 			}
 		}

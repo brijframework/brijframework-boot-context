@@ -1,6 +1,9 @@
 package org.brijframework.jpa.hibernate.factories;
 
 
+import java.lang.annotation.Annotation;
+
+import org.brijframework.jpa.util.EntityConstants;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -24,7 +27,14 @@ public class HibernateFactory {
 
 	public void loadSessionFactory() {
 		Configuration configuration = new Configuration();
-		configuration.configure("/hibernate.cfg.xml");
+		configuration.configure("hibernate.cfg.xml");
+		@SuppressWarnings("unchecked")
+		Class<? extends Annotation> entity = (Class<? extends Annotation>) org.brijframework.util.reflect.ClassUtil.getClass(EntityConstants.JPA_ENTITY_ANNOTATION);
+		org.brijframework.util.factories.ReflectionFactory.getFactory().getInternalClassList().forEach(cls->{
+			if(cls.isAnnotationPresent(entity)){
+				configuration.addAnnotatedClass(cls);
+			}
+		});
 		ServiceRegistry srvcReg = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
 		sessionFactory = configuration.buildSessionFactory(srvcReg);
 	}

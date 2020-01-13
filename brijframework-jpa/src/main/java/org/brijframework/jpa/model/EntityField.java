@@ -17,7 +17,6 @@ public class EntityField {
 	private int min;
 	private int max;
 	private boolean optional;
-
 	private EntityModel model;
 
 	public String getId() {
@@ -155,6 +154,5 @@ public class EntityField {
 	public void setModel(EntityModel model) {
 		this.model = model;
 	}
-	
 
 }

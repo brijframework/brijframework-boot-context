@@ -8,7 +8,7 @@ import org.brijframework.jpa.util.EntityConstants;
 public class EntityModelLoader {
 	
 	public static void main(String[] args) {
-		String filePath=""; //environment.getProperty(EntityConstants.IMPORT_FILES)
+		String filePath="\\jpa"; //environment.getProperty(EntityConstants.IMPORT_FILES)
 		EntityProcessor processor=new HibernateEntityProcessorImpl();
 		EntityContext context=new EntityContext();
 		context.setProperty(EntityConstants.IMPORT_FILES, filePath);

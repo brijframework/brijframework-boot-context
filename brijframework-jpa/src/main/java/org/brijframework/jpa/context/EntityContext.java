@@ -3,6 +3,7 @@ package org.brijframework.jpa.context;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.brijframework.context.impl.module.AbstractModuleContext;
 import org.brijframework.jpa.EntitySchema;
 import org.brijframework.jpa.container.EntityDataContainer;
 import org.brijframework.jpa.container.EntityModelContainer;
@@ -10,13 +11,13 @@ import org.brijframework.jpa.factories.EntityConfigFactory;
 import org.brijframework.jpa.factories.EntityDataFactory;
 import org.brijframework.jpa.factories.EntityMapperFactory;
 import org.brijframework.jpa.factories.EntityModelFactory;
-import org.brijframework.jpa.factories.EntityQueryFactory;
 import org.brijframework.jpa.factories.EntityPropertiesFactory;
+import org.brijframework.jpa.factories.EntityQueryFactory;
 import org.brijframework.jpa.factories.files.JsonDataEntityFactory;
 import org.brijframework.jpa.factories.internal.AnnoEntityModelFactory;
 import org.brijframework.jpa.factories.internal.EntityConfigFactoryImpl;
 
-public class EntityContext {
+public class EntityContext extends AbstractModuleContext {
   
 	private Properties properties=new Properties();
 	
@@ -24,7 +25,8 @@ public class EntityContext {
 	
 	public  ConcurrentHashMap<String, Class<?>> adpterMap = new ConcurrentHashMap<>();
 	
-	public void start() {
+	public void init() {
+		
 		EntityConfigFactory	configFactory=EntityConfigFactoryImpl.getFactory();
 		configFactory.setContext(this);
 		configFactory.loadFactory();

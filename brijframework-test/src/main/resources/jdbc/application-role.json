@@ -1,0 +1,16 @@
+[
+	{
+		"id": "INVERTORY_APP_OWNER",
+		"type": "org.brijframework.dao.EOAppRole",
+		"name": "appRole",
+		"unique": "appRoleId",
+		"properties": {
+			"appRoleId": "INVERTORY_APP_OWNER",
+			"appRoleName": "OWNER",
+			"appMenuId": "INVERTORY_APP_OWNER",
+			"application": {
+				"@ref": "INVERTORY_APP"
+			}
+		}
+	}
+]

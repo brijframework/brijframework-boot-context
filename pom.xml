@@ -19,6 +19,8 @@
 		<module>brijframework-boot</module>
 		<module>brijframework-model</module>
 		<module>brijframework-bean</module>
+		<module>brijframework-jpa</module>
+		<module>brijframework-hibernate</module>
 		<module>brijframework-test</module>
 	</modules>
 	<properties>

@@ -9,4 +9,4 @@ exec &> logfile.txt
 
 # brijframework-context
 echo "Starting brijframework-context..."
-mvn clean install 
+mvn clean install $

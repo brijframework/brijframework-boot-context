@@ -121,6 +121,7 @@ public abstract class AbstractModuleContext extends AbstractContext implements M
 
 	protected void invokeInstanceMethod(Class<? extends ModuleContainer> cls) {
 		try {
+			@SuppressWarnings("deprecation")
 			ModuleContainer container = (ModuleContainer) cls.newInstance();
 			container.setContext(this);
 			container.init();

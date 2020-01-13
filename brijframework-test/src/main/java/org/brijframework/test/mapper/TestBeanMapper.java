@@ -36,7 +36,7 @@ public class TestBeanMapper {
 	public static void targetMapper() {
 		System.err.println("----------------------Test desitination mapper -----------------");
 		Employee toBean=new Employee();
-		toBean.setId("1010");
+		toBean.setId(1010);
 		toBean.setProperty("name", "Target");
 		toBean.setProperty("rollNo", "201301");
 		toBean.setProperty("address.city.name", "Target Noida");

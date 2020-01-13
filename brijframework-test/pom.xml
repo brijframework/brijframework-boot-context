@@ -23,10 +23,16 @@
 			<artifactId>brijframework-bean</artifactId>
 			<version>0.0.1</version>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>org.brijframework</groupId>
 			<artifactId>brijframework-jpa</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.brijframework</groupId>
+			<artifactId>brijframework-hibernate</artifactId>
 			<version>0.0.1</version>
 		</dependency>
 
@@ -44,6 +50,14 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.2.2</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.18</version>
+		</dependency>
+
 
 
 	</dependencies>
