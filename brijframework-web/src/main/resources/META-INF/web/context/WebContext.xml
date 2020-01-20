@@ -1,0 +1,13 @@
+<web-context>
+   <web-container id="WebGroupContainer" model="org.brijframework.web.container.WebGroupContainer">
+      <instance>
+           org.brijframework.web.container.WebGroupContainer.getContainer
+      </instance>
+      <constructor>
+        <param type="" name=""></param>
+      </constructor>
+      <init-params>
+        <param type="" name=""></param>
+      </init-params>
+   </web-container>
+</web-context>

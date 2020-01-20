@@ -67,6 +67,16 @@ public abstract class AbstractBeanScopeFactory<K, T extends BeanScope> extends A
 		return null;
 	}
 	
+	@SuppressWarnings("unchecked")
+	@Override
+	public Object getBeanObject(BeanDefinition beanDefinition) {
+		T beanScope = getBeanScope(beanDefinition,(K)getUniqueID(beanDefinition));
+		if(beanScope!=null) {
+			return beanScope.getScopeObject();
+		}
+		return null;
+	}
+	
 	public BeanDefinition getBeanDefinitionOfObject(Object object) {
 		T beanScopeOfObject = getBeanScopeForObject(object);
 		return beanScopeOfObject!=null ? beanScopeOfObject.getBeanDefinition(): null;

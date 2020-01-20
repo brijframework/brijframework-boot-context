@@ -18,4 +18,6 @@ public interface BeanScopeFactory<K, T> extends ModuleFactory<K, T>{
 	Object getBeanObject(String object);
 
 	BeanDefinition getBeanDefinitionOfObject(Object current);
+
+	Object getBeanObject(BeanDefinition beanDefinition);
 }

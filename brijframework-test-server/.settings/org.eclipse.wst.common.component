@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+            
+    
+    <wb-module deploy-name="webserver">
+                        
+        
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+                        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="brijframework-util-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-util/brijframework-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-web-mvc-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-web-mvc/brijframework-web-mvc">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-bean-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-bean/brijframework-bean">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-boot-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-boot/brijframework-boot">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-resources-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-resources/brijframework-resources">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-asm-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-asm/brijframework-asm">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-model-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-model/brijframework-model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-support-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-support/brijframework-support">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-api-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-api/brijframework-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-web-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-web/brijframework-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="brijframework-web-app-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-tomcat/brijframework-tomcat">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                        
+        
+        <property name="java-output-path" value="/brijframework-test-server/target/classes"/>
+                        
+        
+        <property name="context-root" value="webserver"/>
+                    
+    
+    </wb-module>
+        
+
+</project-modules>

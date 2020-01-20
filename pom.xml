@@ -19,9 +19,18 @@
 		<module>brijframework-boot</module>
 		<module>brijframework-model</module>
 		<module>brijframework-bean</module>
+		<module>brijframework-expression</module>
 		<module>brijframework-jpa</module>
+		<module>brijframework-data</module>
+		<module>brijframework-jdbc</module>
 		<module>brijframework-hibernate</module>
+		<module>brijframework-eclipselink</module>
+		<module>brijframework-web</module>
+		<module>brijframework-web-mvc</module>
+		<module>brijframework-web-app</module>
 		<module>brijframework-test</module>
+		<module>brijframework-test-server</module>
+		
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
