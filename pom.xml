@@ -12,6 +12,7 @@
 	<url>http://maven.apache.org</url>
 	<modules>
 		<module>brijframework-api</module>
+		<module>brijframework-builder</module>
 		<module>brijframework-util</module>
 		<module>brijframework-support</module>
 		<module>brijframework-asm</module>

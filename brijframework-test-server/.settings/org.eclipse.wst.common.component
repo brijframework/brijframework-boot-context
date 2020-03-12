@@ -44,7 +44,7 @@
         <dependent-module archiveName="brijframework-web-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-web/brijframework-web">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="brijframework-web-app-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-tomcat/brijframework-tomcat">
+        <dependent-module archiveName="brijframework-web-app-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/brijframework-web-app/brijframework-web-app">
             <dependency-type>uses</dependency-type>
         </dependent-module>
                         
